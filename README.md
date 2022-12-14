@@ -37,6 +37,7 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - JavaScript
+- API request
 
 ## Author
 
