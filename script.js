@@ -1,19 +1,25 @@
-const advTitle = document.querySelector('.advice__title');
-const advText = document.querySelector('.advice__text');
-const refreshButton = document.querySelector('.refresh-box');
-const url = 'https://api.adviceslip.com/advice/12';
+window.onload = () => {
+  const advTitle = document.querySelector('.advice__title');
+  const advText = document.querySelector('.advice__text');
+  const refreshButton = document.querySelector('.refresh-box');
+  const url = 'https://api.adviceslip.com/advice';
 
-async function catchAdvice() {
-  const jsonDetails = fetch(url)
-    .then((response) => response.json)
-    .then((a) => console.log(a));
+  const loadAdvice = async () => {
+    try {
+      const adv = await fetch(url);
+      const advJson = adv.json();
 
-  /* const adviceNumber = (await jsonDetails).slip.id;
-  const adviceText = (await jsonDetails).slip.advice; */
+      return advJson;
+    } catch (error) {
+      console.log('Error', error);
+    }
+  };
 
-  console.log(jsonDetails);
-}
-
-refreshButton.addEventListener('click', () => {
-  catchAdvice();
-});
+  refreshButton.addEventListener('click', () => {
+    loadAdvice().then(({ slip }) => {
+      ({ id, advice } = slip);
+      advTitle.innerText = `Advice #${id}`;
+      advText.innerText = advice;
+    });
+  });
+};
