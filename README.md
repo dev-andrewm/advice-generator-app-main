@@ -22,19 +22,18 @@ Users should be able to:
 
 ### Screenshot
 
-![](screenshots/desktop_rating_state.jpg)
+![](screenshots/desktop.jpg)
 ![](screenshots/desktop_active_state.jpg)
 
 ### Links
 
-- Solution URL: (https://github.com/dev-andrewm/interactive-rating-component)
-- Live Site URL: https://dev-andrewm.github.io/interactive-rating-component/
+- Solution URL: (https://github.com/dev-andrewm/advice-generator-app-main)
+- Live Site URL: https://dev-andrewm.github.io/advice-generator-app-main/
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
 - Flexbox
 - Mobile-first workflow
 - JavaScript
