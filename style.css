@@ -38,7 +38,7 @@ main {
   max-height: 40.0rem;
 
   border-radius: 1.0rem;
-  background-color: var(--grayish-blue);
+  background-color: var(--dark-grayish-blue);
   margin: 0 auto;
 }
 
@@ -61,7 +61,7 @@ main {
 }
 
 .advice__text {
-  color: white;
+  color: var(--light-cyan);
   text-align: center;
 }
 
@@ -77,7 +77,7 @@ main {
 .pattern-divider {
   position:absolute;
   top: 15%;
-  width: 100%;
+  width: 80%;
   height: 15px;
   
   background: url("images/pattern-divider-mobile.svg") center no-repeat;
@@ -114,4 +114,11 @@ footer {
   font-weight: 500;
 
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 700px) {
+  .pattern-divider {
+
+    background: url("images/pattern-divider-desktop.svg") center no-repeat;
+  }
 }
