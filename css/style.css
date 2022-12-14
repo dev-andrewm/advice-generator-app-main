@@ -80,7 +80,7 @@ main {
   width: 80%;
   height: 15px;
   
-  background: url("images/pattern-divider-mobile.svg") center no-repeat;
+  background: url("../images/pattern-divider-mobile.svg") center no-repeat;
 }
 
 .refresh__dice__box {
@@ -118,7 +118,6 @@ footer {
 
 @media (min-width: 700px) {
   .pattern-divider {
-
-    background: url("images/pattern-divider-desktop.svg") center no-repeat;
+    background: url("../images/pattern-divider-desktop.svg") center no-repeat;
   }
 }
