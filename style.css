@@ -1,0 +1,117 @@
+:root {
+  font-size: 62.5%;
+
+  --font-weight: 800;
+
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+
+  --mobile-width: 37.5rem;
+  --desktop-width: 144.0rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: var(--dark-blue);
+  width: 100vw;
+  height: 100vh;
+
+  font-family: "Manrope", sans-serif;
+  font-size: 2.8rem;
+  font-weight: var(--font-weight);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  
+  width: 85%;
+  min-width: calc(85/100 * var(--mobile-width));
+  max-width: 44.0rem;
+  max-height: 40.0rem;
+
+  border-radius: 1.0rem;
+  background-color: var(--grayish-blue);
+  margin: 0 auto;
+}
+
+.advice-box {
+  max-height: 35.0rem;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding: 0 2.0rem;
+}
+
+.advice__title {
+  margin-top: 3.5rem;
+  font-size: 1.6rem;
+  color: var(--neon-green);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.advice__text {
+  color: white;
+  text-align: center;
+}
+
+.refresh-box {
+  min-height: 10.0rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.pattern-divider {
+  position:absolute;
+  top: 15%;
+  width: 100%;
+  height: 15px;
+  
+  background: url("images/pattern-divider-mobile.svg") center no-repeat;
+}
+
+.refresh__dice__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: calc(100% - 3.25rem);
+  width: 6.5rem;
+  height: 6.5rem;
+
+  background-color: var(--neon-green);
+  border-radius: 50%;
+}
+
+.refresh__dice__box:hover {
+  cursor: pointer;
+  box-shadow: 0 0 30px 3px var(--neon-green);
+}
+
+.refresh__dice__box img {
+  width: 40%;
+  height: 40%;
+}
+
+footer {
+  margin: 4.25rem auto;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 500;
+
+  color: hsl(228, 45%, 44%);
+}
